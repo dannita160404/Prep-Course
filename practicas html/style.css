@@ -1,0 +1,91 @@
+h2 {
+  font-size: 40px;
+  color: blue;
+  font-family: 'Caveat', cursive;
+  border-width: 10px;
+  border-color: aqua;
+  border-style: groove double;
+}
+
+  
+li {
+  font-size: 25px;
+  color: crimson;
+}
+
+img{
+  width: 300px;
+}
+
+.imagen-amor{
+  width: 400px;
+  border-width: 12px;
+  border-color: blueviolet;
+  border-style: groove double;
+}
+
+p{
+  border-width: 5px;
+  border-color: cornflowerblue;
+  border-style: double dotted;
+}
+
+.bordes-redondeados{
+  border-radius: 50%;
+}
+
+
+
+.derecho{
+  background-color: rgb(189, 135, 220);
+}
+
+#p-espiritu{
+  font-size: 30px;
+  color: chocolate;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#ignorar-1{
+  font-size: 60px;
+  color: indigo;
+  border-width: 15px;
+  border-color: crimson;
+  border-style: double;
+}
+  
+
+div{
+  background-color: gold;
+}
+ 
+#naturaleza{
+  margin: 20px 10px 20px 10px;
+  background-color: darkviolet;
+  border-width: 5px;
+  border-color: blue;
+  border-style: double;
+  
+  
+}
+
+[type="radio"] {
+  margin: 10px;
+}
+
+[type="checkbox"] {
+  margin: 10px;
+}
+
+a[href="https://www.biblegateway.com/passage/?search=Efesios%203&version=RVR1960"] {
+  color: rgb(208, 171, 242);
+  text-decoration: overline;
+  font-weight: bold;
+}
+
+body {
+  background-color: blanchedalmond;
+  border: 15px;
+  border-style: dotted;
+  border-color: blue;
+}
