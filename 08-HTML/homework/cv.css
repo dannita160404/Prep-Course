@@ -1,0 +1,56 @@
+.imagen {
+    width: 500px;
+    height: 500px;
+    position: relative;
+    left: 450px;
+    top: 5px;
+    border-radius: 50%;
+    border-width: 10px;
+    border-color: rgb(87, 41, 87);
+    border-style: groove;
+
+
+}
+
+.titulo {
+    font-family: 'Fredoka One', cursive;
+    color: purple;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    padding: 0%;
+    margin: 3%;
+    border-width: 5px;
+  border-color: rgb(194, 118, 230);
+  border-style:  groove;
+  display: flex;
+  justify-content: center;
+}
+
+p {
+
+font-family: 'Fredoka One', cursive;
+margin: 30px 80px;
+border-width: 5px;
+border-color: rgb(194, 118, 230);
+border-style: groove;
+padding: 30px;
+}
+
+body {
+    background-color: rgb(217, 191, 242);
+}
+
+h2 {
+    font-family: 'Fredoka One', cursive;
+    color: purple;
+}
+
+ol {
+    font-family: 'Fredoka One', cursive;
+
+}
+
+ul{
+    font-family: 'Fredoka One', cursive; 
+}

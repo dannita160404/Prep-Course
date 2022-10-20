@@ -1,0 +1,437 @@
+<script>
+    var nombre = "danna";
+    console.log(nombre);
+
+
+    nombre = 1;
+    console.log(nombre);
+
+
+    //operador de asignacion     
+    var a;
+    var b = 5;
+
+    console.log(a); //Error
+    console.log(b); //si tiene valor 
+
+    a = 12
+    console.log(a);
+
+    //asiganr el valor de una variable a otra 
+    var c = 1;
+    var d = c;
+
+    console.log(c);
+    console.log(d);
+
+    //#2
+
+    var e = 4;
+    var f;
+
+    console.log(e);
+    console.log(f);
+
+    f = e
+    console.log(f);
+
+
+    //suma
+    var suma = 100 + 36;
+
+    console.log(suma);
+
+    //resta 
+    var resta = 200 - 67; //positivo
+    console.log(resta);
+
+    resta = 67 - 200 // negativo
+    console.log(resta);
+
+    //multiplicacion 
+    var producto = 5 * 5; //positiva
+    console.log(producto);
+
+    producto = -5 * 5; //negativa
+    console.log(producto);
+
+    //divicion
+
+    var cociente = 5 / 5; //numero entero
+    console.log(cociente);
+
+    cociente = 24 / 15; //numero decimal
+    console.log(cociente);
+
+    cociente = 3 / 0; //infinito
+    console.log(cociente);
+
+    //operadores con variables = variables
+    var cociente = a * e;
+    console.log(cociente);
+
+
+    // multiplicar decimales 
+    var producto = 1.5 * 2.8;
+    console.log(producto);
+
+    //dividir en decimal
+    var resto = 15 % 5; //cero
+    console.log(resto);
+
+    resto = 5 % 2; // resto de 1
+    console.log(resto);
+
+    //incrementar el valor de una variable
+
+    var maquillajeComprado = 10; // INICIALMENTE
+    console.log(maquillajeComprado);
+
+    maquillajeComprado = maquillajeComprado + 1 // opcion 1
+    console.log(maquillajeComprado);
+
+    maquillajeComprado++; //opcion 2
+    console.log(maquillajeComprado);
+
+    //reducir el valor de una variable
+
+    var maquillajeComprado1 = 10;
+    console.log(maquillajeComprado1);
+
+    maquillajeComprado1 = maquillajeComprado1 - 1;
+    console.log(maquillajeComprado1);
+
+    maquillajeComprado1--;
+    console.log(maquillajeComprado1);
+
+    //asignacion de suma 
+
+    var librosComprados = 15;
+    console.log(librosComprados);
+
+    librosComprados = librosComprados + 5;
+    console.log(librosComprados);
+
+    librosComprados += 5;
+    console.log(librosComprados);
+
+    //asignacion de resta
+    var deuda = 300
+    console.log(deuda);
+
+    deuda = deuda - 500;
+    console.log(deuda);
+
+    deuda -= 100;
+    console.log(deuda);
+
+    //asignacion de multiplicacion
+
+    var librosComprados1 = 30;
+    console.log(librosComprados1);
+
+    librosComprados1 = librosComprados1 * 20;
+    console.log(librosComprados1);
+
+    librosComprados1 *= 10;
+    console.log(librosComprados1);
+
+    //asignacion de divicion 
+
+    var salario = 200;
+    console.log(salario);
+
+    salario = salario / 10
+    console.log(salario);
+
+    salario /= 5;
+    console.log(salario);
+
+    //asignacion de restos
+
+    var sobra = 300
+    console.log(sobra);
+
+    sobra = sobra % 30;
+    console.log(sobra);
+
+    sobra %= 20;
+    console.log(sobra);
+
+    //cadena de caracteres
+
+    var miNombre = "danna";
+    console.log(miNombre);
+
+    //cadenas de caracter con escape
+
+    var miCadena = "soy una cadena con \"comillas\""
+    console.log(miCadena);
+
+    // cadenas con comillas simples y dobles y su escape
+
+    var miEscape = "soy un escape con 'comillas'" //simples
+    console.log(miEscape);
+
+    miEscape = 'soy un escape con "comillas dobles"' //dobles 
+    console.log(miEscape);
+
+    //secuencias de escape
+
+    var java = "estoy aprendiendo: \njavascrip \ngenial:D" //linea nueva (\n)
+    console.log(java);
+
+    var java1 = "estoy aprendien \tjavascrip" //tabulacion (\t)
+    console.log(java1);
+
+    var java2 = "estoy aprendien \bjavascrip" //retroces (\b)
+    console.log(java2);
+
+    var java3 = "estoy aprendien \fjavascrip" //salto de pagina (\f)
+    console.log(java3);
+
+    //cocadenar cadenas 
+
+    var miNombreCompleto = "danna" + " rodriguez"
+    console.log(miNombreCompleto);
+
+    //cadenas con variables
+
+    var verbo = "programar"
+
+    var mensaje = "estoy aprendiendo a " + verbo
+    console.log(mensaje);
+
+
+    var mensaje = "estoy aprendiendo a " + verbo + " con el Espiritu Santo"
+    console.log(mensaje);
+
+    //agregar variables a cadenas de caracteres
+
+    var comienzo = "te amo "
+    var final = "Espiritu Santo"
+
+    comienzo += final;
+    console.log(comienzo);
+
+    //logitud de una cadena 
+
+    miCadena1 = "hola"
+    console.log(miCadena1.length);
+
+    //notacion de corchetes
+
+    var presentacion = "hola"
+    console.log(presentacion[0] );
+
+    var presentacion1 = "HOLA"
+    console.log(presentacion1[3]);
+
+    var presentacion2 //notacion del ultimo caracter
+    presentacion2 = "java"
+    console.log(presentacion2[presentacion2.length-1]);
+
+    var presentacion3 //notacion de izquierda a derecha
+    presentacion3 = "java"
+    console.log(presentacion3[presentacion3.length-4]);
+
+
+    //palabras en blanco
+
+    var parte1 = "te amare"
+    var parte2 = "para toda"
+    var parte3 = "la vida"
+    var parte4 = "y hasta el"
+
+    var palabrasEnBlanco = "yo " + parte1 + " " + parte2  + " " + parte3 + " Espiritu Santo" + " " + parte4 + " mas haya" + "<3"
+
+    console.log(palabrasEnBlanco);
+
+    //arreglos
+
+    var estudiantes = [ "danna", "jabes", "mateo"]
+    console.log(estudiantes);
+
+    //arreglos anidados
+
+    var estudiantes1 = [["danna", 50 ], ["jabes", 20 ], ["mateo", 25]] //examen y nota de el
+    console.log(estudiantes1);
+
+    var listaDeProductos = [["biblias", 40, "001"], ["altares", 30, "002"], ["aceites", 15, "003"]] // tienda con producto,precio, numero de serie
+    console.log(listaDeProductos);
+
+    var experimento = [[2.3, 4.3, 5.6], [1.0, 4.5, 3.5], [2.4, 6.7, 2.9]] //experimento y los resultados
+    console.log(experimento);
+
+    //acceder a elementos que estan en arreglos
+
+    var edades = [22, 18, 16]; // 
+    console.log(edades[0]);
+
+    var cociente = edades[0] / edades[1] / edades[2] // dividiendo arreglos
+    console.log(cociente);
+
+    //modificar los datos de un arreglo
+
+    var miArreglo = [10,20,30]
+    miArreglo[0] = 30;
+    console.log(miArreglo);
+
+    miArreglo[1]= [1, 5, 3]
+    console.log(miArreglo);
+
+    //arreglos multidimencionales
+
+    var miArreglo1 = [ [1, 2, 3 ], [4, 5, 6]  ]
+    console.log(miArreglo1[0][2]);
+    console.log(miArreglo1[1][1]);
+
+    //push
+
+    var estaciones =["invieno", "otoño", "primavera"]
+     estaciones.push("verano");
+    console.log(estaciones);
+
+    //pop quitar
+
+    var estaciones1 = ["invierno", "otoño", "primavera", "verano"]
+    estaciones1.pop();
+    console.log(estaciones1);
+
+    //pop pegar
+
+    var estaciones1 = ["invierno", "otoño", "primavera", "verano"]
+    var estacion
+    estacion = estaciones1.pop();
+    console.log(estaciones1);
+    console.log(estacion);
+
+    //shift
+
+    var estaciones2 = [ "invierno", "otoño", "primavera", "verano" ]
+    estaciones2.shift()
+    console.log(estaciones2);
+
+    //unshift
+    var estaciones = [ "invierno", "otoño", "primavera" ]
+    estaciones.unshift("verano")
+    console.log(estaciones);
+
+    //lista de compras 
+
+var miLista  = [ ["leche", 3 ], ["galletas", 7 ], [ "arroz",5 ], ["aceite",8 ] ];
+
+//leche
+console.log("voy a comprar " + miLista[0][0] + " y la cantidad "+  miLista[0][1]);
+
+//galletas
+console.log("voy a comprar "+ miLista[1][0] + " y la cantidad "+ miLista[1][1]);
+
+//arroz
+console.log("voy a comprar "+ miLista[2][0] + "y la cantidad" + miLista[2][1]);
+
+//aceite
+console.log("voy a comprar " + miLista[3][0] + " y la cantidad "+  miLista[3][1]);
+
+
+//funciones
+function funcion () {
+    console.log("TE AMO ESPIRITU SANTO");
+}
+
+funcion()
+funcion()
+
+//argumentos
+function suma1(a, b) {
+    var resultado = a + b;
+    console.log("el resultado de" +" " + a + "+" + b + " " + "es:" + resultado );
+}
+
+suma1(2, 6);
+suma1(4, 9);
+
+//metodo 2 argumentos 
+function suma2(a, b) {
+    var resultado = a + b;
+    console.log("el resultado de" +" " + a + "+" + b + " " + "es:" + resultado );
+  }
+
+    var x = 2;
+    var y = 8;
+
+    suma2(x, y);
+
+    //ejemplo con cadenas
+
+    function unircadenas (cadena1, cadena2, cadena3) {
+    console.log(cadena1+ " " + cadena2 + " " + cadena3);
+      }
+
+      unircadenas ("estoy con", "el amor de", "mi vida")
+
+      //variable global
+
+      var miVariableGlobal = 4
+      console.log(miVariableGlobal);
+
+      function miFuncion(){
+        console.log(miVariableGlobal);
+      } 
+
+      miFuncion()
+
+      //VARIABLE LOCAL
+
+      function miFuncion1 (){
+        var miVariableLocal = 5
+        console.log(miVariableLocal);
+      }
+
+      miFuncion1()
+
+      //ambito global VS ambito local
+
+      var miNombre1 = "DANNA"
+
+      function mostrarNombre() {
+        var miNombre1 = "SOFIA"
+        console.log(miNombre1);
+      }
+
+      mostrarNombre() // local 
+
+      console.log(miNombre1); //global 
+
+      //retornar un valor
+      function suma3(x, y){
+        return x+y;
+      } 
+
+      console.log( suma3(2, 6));
+
+      //underined
+      function suma4 (d, s){
+        console.log(d+s);
+      }
+
+      console.log(suma4(2, 8));
+
+      //asignar un valor retornado
+      function suma5 (a, b){
+      return a+b;
+      }
+
+      var miResultado = suma5(4, 8)
+      console.log(miResultado);
+
+      //ejemplo con cadenas 
+
+      function crearCadena (lenjuageDeProgramacion){
+      return "mi meta es aprender"+ " " + lenjuageDeProgramacion;
+  }
+
+  var miMeta = crearCadena("javascript")
+  console.log(miMeta);
+
+</script>
