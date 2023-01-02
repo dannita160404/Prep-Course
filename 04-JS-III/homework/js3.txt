@@ -1,0 +1,56 @@
+✡ ARRAYS ✡
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+◉ que es:
+Un arrays es una colección o agrupación de elementos en una misma variable, cada uno de ellos ubicado por la posición que ocupa en el array.
+En algunas ocasiones también se les suelen llamar arreglos
+--------------------------------------------------------------
+◉ para que sirve:
+Los arrays son variables estructuradas, donde cada elemento se almacena de forma consecutiva en memoria.
+ Las cadenas de caracteres son declaradas como arrays de caracteres y permiten la utilización de un cierto número de notaciones y de funciones especiales.
+--------------------------------------------------------------
+◉ como se estructura un arrays
+un array es como crear una variable pero en vez de poner un dato o un valor vamos a poner un arreglo que para los arreglos se usan corchetes -> []
+ASI:
+ var miArreglo = ["arreglo"]
+
+ 👉 es importante aclarar que tenemos que rodear el arreglo con "comillas"
+
+ AHORA exite algo interesantes sobre los arrays y es que se pueden poner los elementos o arreglos que necesitemos
+
+ EJEMPLO : quiero crear un array que contengan las estaciones del año, seria ASI:
+  var estaciones = ["invierno", "otoño", "primavera", "verano"]
+
+  👉 es importante que entre cada elemento se ponga una coma y un espacio 
+
+TAMBIEN se puede hacer con numeros pero los en los numeros no hay necesidad de ponerle "comillas"
+ASI:
+var numeros = [1, 2, 3, 4,]
+
+------------------------------------------------------------------
+◉ como puedo utilizar los elementos de mi arrays
+para poder usas los elementos de un arrays tenemos que saber cual es la posicion del elemento ¿como? tenemos que conocer cual es su indice
+
+¿que es el indice?
+el indice es el numero que tienen cada elemento del arreglo y este se cuenta desde 0 
+ASI:
+ var estaciones = ["invierno", "otoño", "primavera", "verano"]
+                        ⇓         ⇓          ⇓          ⇓
+                        0         1          2          3
+
+ya sabiendo como es un indice o posicionamiento, vamos a averiguar como podemos mostrar nuestros elementos
+
+ENTONCES para poder utilizar un elemento se tiene que usar ese indice 
+
+EJEMPLO : supongamos que tengo nuevamente el arreglo con las estaciones del año.
+
+  var estaciones = ["invierno", "otoño", "primavera", "verano"]
+  -supongamos quenecesito el elemento "primavera" utilizando el indice podemos mostararlo y utilizarlo en la consola.
+
+ALGO ASI :
+console.log(estaciones[2])
+
+RESULTADO FINAL:
+var estaciones = ["invierno", "otoño", "primavera", "verano"]
+console.log(estaciones[2])
+
+ 

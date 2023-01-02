@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>DINOSAURIO</title>
+<link href="dino.css" rel="stylesheet">
+</head>
+<body>
+    <div class="contenedor"></div>
+    <div class="suelo"></div>
+    <div class="dino dino-corriendo"></div>
+    <div class="score"></div>  
+
+    <script>
+        var time = new Date()
+        var deltatime
+
+        if (document.readyState ==="complete" || document.readyState === "interactive" ) {
+            setTimeout(init,1);
+            
+        } else{
+            document.addEventListener("DOMContentLoaded", init);
+        }
+
+        function init (){
+            time = new Date()
+            start();
+            loop();
+        }
+
+        function loop(){
+            deltatime = (new date() - time) / 1000;
+            time = new date();
+            Update()
+            requestAnimationFrame(loop)
+        }
+
+        //JUEGOS 
+        var sueloY = 22;
+        var velY = 0;
+        var impulso = 900;
+        var gravedad = 2500;
+        var dinoPosx = 42;
+        var dinoPosy = sueloY
+        var sueloX = 0;
+        var velocidadEse = 1280/3;
+        var gameVel = 1;
+        var score = 0;
+        var parado = false;
+        var saltando = false;
+
+
+        var contenedor
+        var dino
+        var textoScore
+        var suelo
+        var gameover 
+
+        function start(){
+           gameover = document.querySelector(".game-over");
+           suelo = document.querySelector(".suelo");
+           contenedor = document.querySelector(".contenedor")
+           textoScore = document.querySelector(".score");
+           dino = document.querySelector(".dino") 
+
+        }
+
+        function Update(){
+          moverSuelo();
+        } 
+
+        function moverSuelo(){
+            sueloX += velocidadEse * deltatime * gameVel;
+            suelo.style.left = -(suelo % contenedor.clientWidth) + "px";
+            
+        }
+
+
+        
+    </script>
+</body>
+</html>

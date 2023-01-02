@@ -344,8 +344,9 @@ funcion()
 
 //argumentos
 function suma1(a, b) {
-    var resultado = a + b;
-    console.log("el resultado de" +" " + a + "+" + b + " " + "es:" + resultado );
+  var resultado = a + b;
+    console.log("el resultado de" +" " + a + "+" + b + " " + "es:" + resultado);
+
 }
 
 suma1(2, 6);
@@ -403,12 +404,7 @@ function suma2(a, b) {
 
       console.log(miNombre1); //global 
 
-      //retornar un valor
-      function suma3(x, y){
-        return x+y;
-      } 
-
-      console.log( suma3(2, 6));
+      //retornar un valo
 
       //underined
       function suma4 (d, s){
@@ -434,4 +430,207 @@ function suma2(a, b) {
   var miMeta = crearCadena("javascript")
   console.log(miMeta);
 
+   function mostrarMensaje() {
+    console.log("¡Hola, Mundo!");
+   }
+
+   mostrarMensaje();
+   mostrarMensaje();
+   mostrarMensaje();
+   mostrarMensaje();
+   mostrarMensaje();
+   mostrarMensaje();
+
+// condicional if
+var x = 5
+
+if (x < 2) {
+  console.log("la condicion es verdadera");
+}
+
+// 2do ejemplo
+ var numero = 5;
+ 
+ if (x > 2 && x < 10) {
+  console.log("la condicion es verdadera");
+ }
+
+// 3er ejemplo
+var estacion = "invierno";
+
+if (estacion == "invierno") {
+  console.log("¡Si! me encanta el invierno");
+}
+
+//for
+
+var miArreglo = []
+
+for (var a = 1 ; a < 10; a = a + 3) [
+  miArreglo.push(a)
+]
+
+console.log(miArreglo);
+
+//segundo ejemplo
+var miArreglo2 = []
+
+for (var a = 1 ; a < 20; a = a + 5) [
+  miArreglo2.push(a)
+]
+
+console.log(miArreglo2);
+
+//OBJETOS 
+var estudiante = {NOMBRE: Pedro, EDAD: 15} 
+console.log(estudiantes);
+
+function Perro(nombre, edad, vivo){
+  this.nombre = nombre;
+  this.edad = edad ;
+  this.vivo = vivo ;
+};
+
+var perro1 = new Perro ("mailo", 8, true )
+console.log(perro1);
+
+var estudiantes = {nombre:"carlos", edad:15, curso:"noveno"}
+console.log(estudiantes);
+
+
+
+var datos = {
+  nombre: "Danna",
+  edad: 18,
+  hobbie: "orar",
+  vivo: true,
+}
+
+for(var datos2 in datos){
+  console.log(datos2);
+}
+
+for(datos3 in datos){
+  console.log(datos[datos3]);
+}
+
+var datos = {
+  nombre: "Danna",
+  edad: 18,
+  hobbie: "orar",
+  vivo: true,
+  function(pais ){
+    pais : colombia
+
+  }
+  
+}
+console.log(datos.function);
+
+//CLASES
+class Jugador {
+  constructor(nombre, colordeojos){
+    this._nombre = nombre
+    this._colordeojos = colordeojos
+   }
+   correr(){}
+   saltar(){}
+   saludar(){
+    return "Hola soy " + this._nombre +  " y mis ojos son de color " + this._colordeojos
+   }
+  }
+
+   let jugador1 = new Jugador ("pepito", "verdes")
+   let jugador2 = new Jugador ("pepita", "azules")
+
+
+   //prototipos
+   class Cocina {
+    constructor(verdura, fruta, proteina){
+      verdura = "tomates"
+      fruta = "manzana"
+      proteina = "carne"
+    }
+  }
+    
+
+    function(grano) {
+      grano1: frijol
+      grano2: lentejas
+    }
+   
+
+   Cocina.prototype
+
+   //prototipo
+   class Padre{
+    constructor(nombre, edad, altura, peso){
+      this.nombre = nombre;
+      this.edad = edad;
+      this.altura = altura;
+      this. peso = peso;
+    }
+   }
+
+   let Luisangel = new Padre("luis angel", "29", "1.77", "73k")
+
+   let jacob = new Padre("jacob", "2", "87 cm", "13k")
+
+   Padre.prototype.regaño = function(){return"no hijo eso no se hace"}
+   
+
+   Luisangel.regaño
+
+   //callback
+   function text01() {
+    console.log("HOLA MI AMORRRRRRRR <3")
+   }
+   
+   function texto2() {
+    console.log("TE AMOOOOOOO MUCHOOOOOOOOOOOOOO")  
+   }
+
+   text01()
+   texto2()
+
+
+   // TIEMPO
+
+   function text01(fn) {
+    setTimeout(function () {
+      console.log("HOLA MI AMORRRRRRRR <3");
+      fn()
+    } ,1000);
+       }
+   
+   function texto2() {
+    console.log("TE AMOOOOOOO MUCHOOOOOOOOOOOOOO")  
+   }
+
+   text01(texto2)
+
+ // PRIORIZA
+   function text01(fn) {
+  fn()
+   console.log("HOLA MI AMORRRRRRRRRRRRRRRRRRRRRRRRRRRRR")
+   
+       }
+   
+   function texto2() {
+    console.log("TE AMOOOOOOO MUCHOOOOOOOOOOOOOO")  
+   }
+
+   text01(texto2)
+   
+
+   // 2DO EJEMPLO
+      function text01(usuario) {
+    console.log("Hola soy" + usuario +  "<3")
+   }
+
+   function crearCadena(usuario, cb){
+    return cb(usuario) 
+   }
+
+crearCadena("Danna", text01)
 </script>

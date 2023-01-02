@@ -1,0 +1,252 @@
+❤ OBJETOS ❤
+________________________________________________________________________________________________________________________________________________________________________________________________________________________
+QUE ES :
+1.Un objeto es una entidad, algo que existe.
+2.Tiene propiedades que lo definen y diferencian.
+3.Tiene métodos para gestionar sus propiedades y, en general, para manejar el objeto.
+
+para entender mejor lo que es un objeto Supongamos un coche como un objeto sobre el cual podemos especificar algunas de sus propiedades:
+
+*Marca
+*Modelo
+*Color
+
+Un comprador en un concesionario de venta podría tener la posibilidad de elegir un coche (un objeto) con una configuración de propiedades a su gusto.
+ Incluso después de realizar su elección podría cambiar de opinión y elegir otro color, por ejemplo. El concesionario estaría dispuesto a mostrarle todas las posibilidades.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+PARA QUE SIRVE
+los objetos sirven para poner una serie de propiedades para gentionarlas y manejarlas 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+COMO SE ESTRUTURA?
+es muy similar a crear una variable pero se ponen {llaves} a el final y lo que esta adentro son los objetos 
+EJEMPLO:
+queremos hacer una pagina que reciba el NOMBRE, EDAD de los estudiantes de una escuela de futbol 
+
+1. se hace una variable 
+2. se ponen las {llaves} a el final de la variable 
+ASI
+ var estudiantes = {}
+3. vamos suponer que hay un estudiante que se llama pedro y tiene 15 años
+SERIA ASI 
+ var estudiante = {NOMBRE: Pedro, EDAD: 15} 
+
+ 👉 las propiedades se separan con comas = ,
+
+PERO que pasa si tenemos 100 estudiantes, tendriamos que hacer 100 veces lo mismo para hacer los 100 estudiantes, pues existe algo que se llama los construtores de objetos que nos ayudan a facilitar esta situacion 
+
+COMO SE CONSTRUYEN LOS CONSTRUTORES DE OBJETOS?
+1. debemos crear una funcion la cual va a ser el contrutor, para explicarlo mejor vamor a hacer una pagina para una veterinaria de perros
+   entonces vamos a crear el contrutor de objetos para esa pagina 
+ASI:
+function veterinaria (){
+
+} 
+
+2. vamor a poner los parametros que es este caso son las diferentes propiedades que va a tener nuestros objetos, en este caso va a tener el NOMBRE, EDAD Y si esta VIVO el perro
+ASI:
+function veterinaria (nombre, edad, vivo){
+
+} 
+
+3. ahora vamos a llamar a el parametro y vamos a asignarle un valor 
+ASI 
+function veterinaria(nombre, edad, vivo){
+  this.nombre = nombre;
+  this.edad = edad ;
+  this.vivo = vivo ;
+};
+
+👉 usamos el this. por que habla de un contexto en este caso estamo dandole un contexto a nuestros parametros
+
+4. ahora vamos a ingresar nuestro primer perro, para eso vamos a crear una variable que va a ser nuestro primer perro 
+  var perro1 = new PerrosEscuela ("mailo", 8, dormir )
+                   ⇓
+            aqui estamos diciendo que es esa funcion PerrosEscuela se va a ejecutar lo que esta dentro de ella y va a cambiar cada dato vacio y va a poner el nuevo dato 
+
+RESULTADO final:
+function Perro(nombre, edad, vivo){
+  this.nombre = nombre;
+  this.edad = edad ;
+  this.vivo = vivo ;
+};
+
+var perro1 = new Perro ("mailo", 8, true )
+console.log(perro1);
+
+(copealo y pegalo en la consola para ver el resutado)
+________________________________________________________________________________________________________________________________________________________________________________________________________________________
+PROPIEDADES 
+una propiedad es una asociacion entre un nombre y un valor 
+-------------------------------------------------
+EJEMPLO
+vamos a usar un objeto que diga el NOMBRE, EDAD Y QUE EN QUE CURSO ESTA entonces........
+
+var estudiantes = {nombre:"carlos", edad:15, curso:"noveno"}
+                     ⇓                ⇓        ⇓
+                   P  R  O  P  I  E  D  A  D  E  S 
+
+
+entonces una propiedad son las caracteristicas que tienen un nombre y estan asociadas con el valor, por ejemplo la propiedad nombre esta asociada a la string "carlos"
+________________________________________________________________________________________________________________________________________________________________________________________________________________________
+METODOS
+un metodo es :
+
+1.toda funcion que esta adentro de un objeto 
+2.metodo es una función la cual es propiedad de un Objeto. 
+
+EJEMPLO
+vamos a hacer un objeto y dentro de ese objeto vamos a poner una funcion y la funcion va a tener mi nombre 
+
+var Objeto = {       
+                  _________
+   nombre: function(){      ┃
+      console.log("Danna"); ┃➨➨ METODO
+   }                        ┃
+                  _________ ┃
+}
+
+________________________________________________________________________________________________________________________________________________________________________________________________________________________
+BUCLE"FOR IN "
+el bucle "for in" sirve para repetir propiedades que estan dentro de un objeto 
+
+----------------------------------------------------------
+COMO SE ESTRUTURA?:
+
+for (variable in objeto)
+
+1. para crear el ciclo for lo primero que se hace es crear una variable 
+for (var datos in objeto)
+  
+2. despues ponemos el objeto que necesitamos que repita sus propiedades 
+for (var datos in datos2)
+-----------------------------------------------------------
+COMO SE USA ?
+
+EJEMPLO:
+1. hacemos un objeto que contenga mis datos personales
+
+var datos = {
+  nombre: "Danna",
+  edad: 18,
+  hobbie: "orar",
+  vivo: true,
+}
+
+2. aqui vamos a usar el ciclo "for in" como?
+     1. vamos a crear la varible dentro del for que en este caso vamos a llamar datos2
+     ASI:
+     for(var datos2  ){
+
+     }
+
+     2. ahora queremos que se repitan las propiedades del objeto aqui es donde usamos en in y ponemos el nombre del objeto que queremos que se repita sus propiedades
+     ASI:
+     for(var datos2 in datos){
+    
+    }
+
+    3. y ya por ultimo lo mostramos en la consola, llamando a la varible que esta dentro de for 
+    ASI
+    for(var datos2 in datos){
+  console.log(datos2);
+    }
+
+    👉 nos va a mostrar en la consola el nombre de las propiedades que en este caso son :
+    * nombre
+    * edad
+    * hobbie
+    * vivo
+
+    PERO no nos va a mostrar el dato de esa propiedad que en este caso son:
+    * Danna
+    * 18
+    * orar
+    * true
+    ----------------------------------------------------------------
+    COMO PUEDO HACER PARA QUE SE MUETRE LOS DATOS DE LAS PROPIEDADES?
+
+   1. se hace exactamente igual hasta la parte en la que lo mostramos en la consola en este caso necesitamos los datos de las propiedades
+   entonces ponemos la varible del for como un [array] y se pone dentro de los (parentesis) del console.log()y se pone tambien el nombre del objeto
+    ASI:
+
+   for(datos2 in datos){
+  console.log(datos[datos2]);
+}
+
+RESULTADO FINAL MOSTRANDO PROPIEDADES:
+var datos = {
+  nombre: "Danna",
+  edad: 18,
+  hobbie: "orar",
+  vivo: true,
+}
+
+for(var datos2 in datos){
+  console.log(datos2);
+}
+
+RESULTADO FINAL MOSTRANDO LOS DATOS DE LAS PROPIEDADES:
+
+var datos = {
+  nombre: "Danna",
+  edad: 18,
+  hobbie: "orar",
+  vivo: true,
+}
+
+ for(datos2 in datos){
+  console.log(datos[datos2]);
+}
+________________________________________________________________________________________________________________________________________________________________________________________________________________________
+NOTACION DE PUNTOS 
+la notacion de puntos en objetos es muy util cuando queremos mostrar las propiedades 
+EJEMPLO:
+1. vamos a crear un objeto con mis datos personales
+
+var datos = {
+  nombre: "Danna",
+  edad: 18,
+  hobbie: "orar",
+  vivo: true,
+}
+
+2. Supongamos que queremos que solo se muestre la propiedad "nombre", aqui se usa la notacion de puntos de la siguente manejar
+
+   datos.nombre
+     ⇓     ⇓
+   nombre  nombre
+   del     de la
+   objeto  propiedad
+
+ 👉 lo que va aparecer en la consola es "Danna" en este caso 
+ ________________________________________________________________________________________________________________________________________________________________________________________________________________________
+ NOTACION DE CORCHETES
+ la notacion de corchetes es mas util cuando queremos mostrar funciones 
+ EJEMPLO:
+ 1.vamos a crear un objeto de mis datos personales 
+
+ var datos = {
+  nombre: "Danna",
+  edad: 18,
+  hobbie: "orar",
+  vivo: true,
+}
+
+2. vamos a crear una funcion detro del objeto y que por ejemplo la funcion contenga donde vivo 
+
+var datos = {
+  nombre: "Danna",
+  edad: 18,
+  hobbie: "orar",
+  vivo: true,
+  function residencia (pais ){
+    pais : colombia
+
+  }
+}
+
+
+
+
+

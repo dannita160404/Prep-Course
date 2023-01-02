@@ -1,0 +1,104 @@
+CICLOS 
+Los ciclos nos permiten repetir la ejecución de un código varias veces.
+ Imagina que quisiéramos repetir la frase "Hola mundo" 5 veces. Podríamos hacerlo manualmente. 
+ SE VERIA ASI:
+
+console.log("Hola Mundo");
+console.log("Hola Mundo");
+console.log("Hola Mundo");
+console.log("Hola Mundo");
+console.log("Hola Mundo");
+
+pero ahora imagina que necesitas poner esa frase 1.000 veces, seria muy largo copiar y pegar 1.000 veces la misma frase.
+para eso sirven los ciblos o tambien conocidos como bucles, sirven para repetir cierta cantidad de veces en menos de 3 lineas
+
+existen varios tipod de ciclos pero vamos a ver uno en espesifico que es  "FOR"
+___________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+ FOR
+ Este bucle es uno de los elementos que más se utiliza en programación. Con este tipo de ciclo puedes establecer el número de iteraciones que necesitas que tu bucle repita hasta que quieras que se acabe.
+ que quiere decir en este ciclo no solo se pone una condicion, tambien se pone [expresión inicial] y [expresión final]
+
+ veamos la estructura de un bucle en for:
+
+ for(sintaxis del bucle for){
+    secuencia de instrucciones o sentencia
+ } 
+
+--------------------------------
+ entonces vamos a explicar cada partee de la estructura:
+
+ for(sintaxis del bucle)
+              ⇓
+     la sintaxis de bucle consiste en 3 expresiones que son sepradas por ; 
+     1.[expresión inicial]: es una expresion o declaracion de una variable 
+     2.[condicion]: la condicion que podremos para que el bucle ejecute
+     3.[expresion final]: Una expresión para ser evaluada al final del bucle. Generalmente se usa para actualizar o incrementar la variable.
+
+SE ORDENAN ASI:
+for(expresion-inicial; condicion; expresion-final)
+
+ya sabiendo como se extrutura el ciclo "FOR", vamos a hacer el paso a paso de como crear un ciclo en for
+---------------------------------
+¿como puedo crear un ciclo en "FOR"?
+1. vamos a crear una variable en mi caso mi variable se va a llama "miArreglo"
+2.debajo de la variable vamos aponer for y nos vamos aconsentrar en la sintaxis
+-vamos a declarar la expresion inicial aqui vamos a crear otra variable y vas a darle un valor y ese valor determina donde se inicia el ciclo, en mi caso mi variable se llamara (i) y su valor sera 0
+-vamos poner una condicon para que el ciclo pueda ejecutarse en mi caso pondre que si mi varible(i) es menor o igual(<=) a 10 se puede ejecutar el ciclo.
+-vamos a declarar la expresion final aqui vamos a decir como queremos actualizar nuestros iteraciones(La iteración es el acto de repetir un proceso, para generar una secuencia de resultados) entonces se puede incrementar(++ o variable = variable + numero) o disminuir(--).
+3. vamos a ir a secuencia de instrucciones o sentencia y vamos a llama a nuestra variable inicial y a el final pondremos (.push()) 
+4. y entre los parentesis de push(aqui) vamos a llamar la variable de la expresion inicial
+5. y de ultimas vamos a llamarlo a la consola
+ASI:
+var miArreglo = []
+
+for(var i = 1; i < 20; i += 2){
+   miArreglo.push(i)
+}
+ console.log(miArreglo)
+___________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+OPERADORES
+Los operadores permiten manipular el valor de las variables, realizar operaciones matemáticas con sus valores y comparar diferentes variables. 
+De esta forma, los operadores permiten a los programas realizar cálculos complejos y tomar decisiones lógicas en función de comparaciones y otros tipos de condiciones.
+
+-----------------------------------
+TIPOS DE OPERADORES
+1.operadores aritmeticos: estos operadores entran los signos de (+)(-)(/)(%)(*) tambien entran (++, --)
+2.operadores logicos: estos toman encuenta el dato o condicion para darle un sentido logico aqui entra (true)(false) tambien para las condiciones usamos (&&)(||)
+3.operadores de comparacion: estos operadores hace que entre valores se comparenten entre elllos, aqui entran (==)(<)(>)(<=)(>=)
+
+ vamos a hablar de un operador que es && 
+ ---------------------------------
+ &&
+ Establece una conjunción lógica de dos expresiones, es decir, que han de resultar True (verdadero) las dos expresiones para que el resultado final también lo sea.
+ EJEMPLO:
+ vamos hacer un condicional en if y tiene 2 condiciones para que las dos cuenten como verdaderas se hace asi:
+
+ if(numero < 5 && numero > 2)
+             ⇓
+aqui estamos diciendo con este simbolo  && que en las dos condiciones se tienen que cumplir, para que ejecuten los codigos 
+
+----------------------------------
+||
+Establece una disyunción lógica de dos expresiones, es decir, que el resultado se dará evaluando una expresión u otra.
+que quiere decir que esto tiene una funcion similar a el operador && pero este operador || solo necesita una condicion verdadera, asi las otras sean falsas
+EJEMPLO:
+ vamos hacer un condicional en if y tiene 2 condiciones:
+
+ if(numero < 6 || numero > 3 )
+
+ supongamos que ingresa un numero X este numero es mayor a 6 pero no es menor que 3, en el caso de este numero x ingresa para que se ejecuten los codigos
+
+ ----------------------------------
+ !
+este operador sirve para invertir 
+EJEMPLO:
+tenemos un condicional if y tiene una condicion
+
+if (numero < 4)
+ lo que hace el operador ! es invertirlo ose que si la condicion era que numero fuera menor que 4, al poner el operador ! la condicion seria que si numero fura mayor a 4
+
+ASI SERIA:
+if(!numero < 4)
+
+

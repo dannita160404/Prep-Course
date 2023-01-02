@@ -1,0 +1,81 @@
+* {
+    padding: 0;
+    margin: 0;
+
+}
+
+body {
+    height: 100vh;
+    background: rgb(143, 65, 20);
+    display: flex;
+    align-items: center;
+
+}
+
+.contenedor {
+    width: 920px;
+    height: 280px;
+    margin: 0 auto;
+    position: relative;
+
+    background: linear-gradient(rgb(249, 247, 246), rgb(255, 188, 150));
+
+}
+
+.dino {
+    width: 84px;
+    height: 84px;
+    position: absolute;
+    bottom: 250px;
+    left: 350px;
+    z-index: 2;
+    background: url(https://raw.githubusercontent.com/GemukiDev/dinosaurio_chrome/99439556c0affd9f431600eb01b396315991f3f0/img/dino.png) repeat-x 0px 0px;
+    background-size: 336px 84px;
+    background-position-x: 0px;
+}
+
+.dino-corriendo {
+    animation: animarDino 0.25s steps(2) infinite;    
+}
+.dino-estrellado {
+    background-position-x: -252px;
+}
+.suelo{
+    margin-left: 308px;
+    width: 60%;
+    height: 258px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    background: url(https://raw.githubusercontent.com/GemukiDev/dinosaurio_chrome/99439556c0affd9f431600eb01b396315991f3f0/img/suelo.png) repeat-x 0px 0px;
+    background-size: 50% 42px;
+}
+
+.score{
+    width: 100px;
+    height: 30px;
+
+    position: absolute;
+    top: 250px;
+    right: 30px;
+    z-index: 10;
+
+    color: mediumvioletred;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: right;
+}
+
+@keyframes animarDino {
+    from{
+        background-position-x: -84px;
+    }
+
+    to{
+        background-position-x: -252px;
+    }
+    
+}
+
+

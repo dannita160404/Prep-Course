@@ -1,0 +1,57 @@
+CALLBACK 
+______________________________________________________________________________________________________________________________________________________________________________________
+QUE ES :
+es una funcion que le puedes pasar a otra como argumento y que se ejecuta despues de que sea completado cualquier operacion.
+______________________________________________________________________________________________________________________________________________________________________________________
+COMO SE HACE?
+tenemos que tener 2 funciones las cuales van a ser claves para nuestera explicacion :
+
+-     function text01(usuario) {
+    console.log("Hola soy" + usuario )
+   }
+
+-   function crearUsuario(){
+    
+   }
+   
+2. ya creadas lo que queremos hacers es que se pueda usar la primera funcion destro de la otra
+COMO LO HACEMOS? 
+vamos a usar el mismo parametro y vamos a añadirle la funcion con el CALLBACK asi (cb)
+
+
+      function text01(usuario) {
+    console.log("Hola soy" + usuario )
+   }
+
+   function crearCadena(usuario, cb){
+    
+   }
+
+3.y ahora vamos a retornar la funcion 1 dentro de la funcion 2 
+ASI:
+      function text01(usuario) {
+    console.log("Hola soy" + usuario)
+   }
+
+   function crearCadena(usuario, cb){
+    return cb(usuario) 
+   }
+
+4. por ultimo voy a mostrar el resultado 
+ASI:
+
+     function text01(usuario) {
+    console.log("Hola soy" + usuario)
+   }
+
+   function crearCadena(usuario, cb){
+    return cb(usuario) 
+   }
+
+crearCadena("Danna", text01)
+  ⇓            ⇓        ⇓ 
+nombre de    usuario    la otra funcion
+la funcion  (parametro)
+
+
+

@@ -1,0 +1,243 @@
+ JAVASCRIPT
+JavaScript es un lenguaje de programación o de secuencias de comandos que te permite implementar funciones complejas en páginas web,
+ 
+ VARIABLES 
+ En un lenguaje de programación existe algo que es indispensable, las variables 
+
+¿Qué es una variable?
+Una variable es un contenedor que contiene información, es como un espacio para guardar cosas que en este caso son los datos los cuales se pueden alterar. 
+ 
+ - Es como una caja donde puedes guardar cosas y en el caso der las variables se guardan datos o valores
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ ¿Qué es una constante?
+es un dato cuyo valor no cambia durante la ejecución del programa, en otras palabras, una vez que a una constante se le asigna un valor, este no podrá ser modificado y permanecerá así durante toda la ejecución del programa.
+
+¿Cuál es la diferencia entre variable y constante?
+
+Variables: sirven para almacenar datos durante la ejecución del programa; el valor
+asociado puede cambiar varias veces durante la ejecución del programa.
+
+Constantes o variables finales: también sirven para almacenar datos pero una vez
+asignado el valor, éste no puede modificarse posteriormente.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+DECLARACIONES
+Son instrucciones en JavaScript para definir e informar a el sistema que vamos a usar una variable, existen 3 tipos de declaración:
+
+VAR: "var" que utilizaremos cuando queramos declarar una o varias variables. Como es lógico, se utiliza esa palabra para definir la variable antes de utilizarla.
+
+LET:” let” Esta manera de declarar las variables afecta a su ámbito, ya que son locales esto quiere decir que se pueden alterar o cambiar.
+
+CONST : “const” es una constante(variables inicializadas a un valor específico) que no se pude cambiar 
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+¿Cómo es la estructura de una variable en JavaScript?
+
+DECLARACION DE LA VARIABLE (NOMBRE DE LA VARIABLE)= VALOR O DATO 
+
+EJEMPLO DE UNA VARIABLE :
+ var nombre = "danna";
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ ¿Cómo puedo acceder a mi variable?
+
+tenemos que llamar la variable 
+Una variable se muestra en una consola que es una herramienta para mostrar el resultado de nuestro código.
+
+Para eso se llama una función en JavaScript que es : console.log ();
+
+Después entre los (paréntesis) se pone el nombre de tu variable
+ASI: 
+
+var nombre = "danna";
+console.log(nombre);
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+También puedes cambiar el valor de tu variable 
+¿Cómo?
+
+1.Se pone el nombre de la variable 
+2.Se pone un operador de asignacion que en este caso es el signo =
+3.Y se pone el nuevo valor a la variable (puede ser un numero o otra cadena de caracteres)
+4.Y después se llama la variable para que aparezca en la consola
+ASI:
+ var nombre = "danna";
+ console.log(nombre)
+
+ nombre = 1;
+ console.log(nombre)
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Es importante saber lo es CamelCase es un estilo de escritura que se aplica a frases o palabras compuestas. El nombre se debe a que las mayúsculas a lo largo de una palabra en CamelCase se asemejan a las jorobas de un camello.
+Esto es importante saberlo ya que las variables se escriben con este tipo de escritura, es to quiere decir que las variables se escriben de esta manera:
+Ejemplo:
+
+var miNombreCompleto = "Danna Sofia Rodriguez Enriquez"
+
+___________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+TIPOS DE DATOS  
+Los tipos de datos en JavaScript son un formato de almacenamiento de datos que puede contener un tipo específico o rango de valores.
+Cuando una aplicación o un programa almacena datos en variables, a cada variable se le debe asignar un tipo de datos específico. Algunos tipos de datos comunes incluyen números(1,-1) , caracteres(‘,?,{,°), cadenas, entre otros. También pueden ser tipos más específicos, como fechas, marcas de tiempo y valores booleanos.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+STRINGS
+( String ) Cadenas de caracteres, El tipo String de JavaScript se utiliza para representar datos textuales y crear las cadenas de caracteres.
+Las cadena de caracteres son aquellos caracteres que están dentro de las comillas de una variable
+
+"toda letra,espacio, numero o simbolo que este dentro de el parentesisi de una variable se le conoce como caracter y cuando se une con mas carcteres se forman las cadenas de caracteres"
+String se utiliza para representar y manipular una secuencia de caracteres.
+___________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+FUNCIONES 
+Una función en JavaScript es similar a un procedimiento, un conjunto de instrucciones, es como si en una función se creara una cajita donde se encuentra los códigos que le ponemos 
+Es decir una función nos sirve para reutilizar un código 
+
+La función nos sirve para reutilizar los códigos que hay dentro de ella con solo usar el nombre de esa función.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+¿Cómo se define una función?
+1.se escribe la palabra reservada “function”}
+2. se le da un nombre a la función (para que cuando la reutilicemos esa secuencia de instrucciones se ejecute)
+3. después del nombre de la función se ponen ()
+4.despues al final se ponen {} y dentro de esas llaves vamos a escribir los códigos que usaremos
+ASI DEBE QUEDAR:
+
+function mostrarMensaje(){
+
+}
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Ahora siguiendo este ejemplo de función -mostrarMensaje-
+
+Queremos mostrar un mensaje ¿Cómo lo haremos o como asignamos un mensaje a la función?
+1.Usamos el código que hace que el código se muestre en la consola ósea console.log()
+2.Dentro de los (paréntesis) se pone el mensaje que queremos dar y dento de ese mensaje se ponen “comillas” algo así (“mensaje”);
+
+ASI:
+
+function mostrarMensaje() {
+    console.log("¡Hola, Mundo!");
+}
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Esto nos sirve para replicar nuestro mensaje cuantas veces queramos 
+
+¿Cómo se muestra el mensaje?
+1.Se llama el nombre de la función 
+2.Se ponen (parentesis) al final del nombre 
+3.Al final se pone punto y coma 
+ASI:
+function mostrarMensaje() {
+    console.log("¡Hola, Mundo!");
+}
+
+mostrarMensaje();
+
+___________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+ARGUMENTOS 
+Los argumentos se usan para darle la capacidad a una función de recibir valores o tomarlos cuando llamemos la función
+
+Para poner un ejemplo vamos a sumar en una función y nos va a salir el resultado de esa suma en la consola 
+
+1.Se define una función pero como vamos a sumar, el nombre de la función va a ser suma 
+2.Y dentro de los (parentesis) se ponen nombres que se llaman parámetros que son cualquier nombre que vamos a usar para llamar a un valor que se va recibir o tomar, los (paréntesis) se conocen como lista de parámetros. En este caso vamos a usar a y b como nuestros parametros 
+
+ASI:
+function suma(a, b) {
+
+}
+---------------------
+3.Ahora vamos a añadirle el cuerpo a nuestra función que este va a ser las instrucciones para ejecutar esa función, en este caso como queremos sumar 2 valores que son nuestros parámetros (a, b) vamos a crear una variable de suma 
+
+ASI:
+function suma(a, b) {
+   var suma = a + b;
+}
+---------------------
+4.Despues vamos a crear una cadena la cual va a mostrar en la consola el resultado, la estructura de la cadena va hacer esta:
+
+console.log("+ a +" + "+ b +")
+---------------------
+asi nos tiene que quedar nuestra funcion:
+
+function suma(a, b) {
+   var suma = a + b;
+   console.log("+ a +" + "+ b +")
+}
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Ahora como vemos a y b (parametros) no tienen un valor
+¿Cómo se le pone el valor?
+
+1Vamos a llamar a nuestra función 
+2Entre los (paréntesis) se ponen los valores que queremos asignar en orden ósea si los paréntesis esta (a, b) a ese orden le vamos a dar su valor por ejemplo queremos que a valga 2 y b valga 6 entonces se pondría así
+
+suma(2, 6);
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+resultado final:
+
+function suma(a, b) {
+   var suma = a + b;
+   console.log("+ a +" + "+ b +")
+}
+
+suma(2, 6);
+___________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+RETURN
+Así como una función puede recibir un valor también puede retornarlo
+Se usa palabra especial llama “return” Se usa cuando quieres ejecutar una serie de acciones, pero no quieres traerte el resultado de todas esas acciones, sino simplemente que se ejecuten.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+¿Cómo puedo usar “return” en una función ?
+
+Vamos a usar el mismo ejemplo de suma que usamos en el argumento 
+
+1.Se define una función de suma como ya explicamos (pagina )
+2.En vez de poner el una variable (var) vamos a replazarlo por ”return”
+
+Asi :
+function suma(a, b){
+    return a+b;
+}
+------------------------
+3.Después vamos a asignarle un valor a nuestros parámetros PERO en este caso es diferente, por que como estamos retornando un valor, y así como asignamos valores a los parámetros en (argumentos) vamos a hacer igual PERO vamos a mostrarlo en la consola y esto se hace atreves de a función console.log(), el nombre de la función se pone adentro de los (paréntesis) de console.log()
+ASI:
+console.log(suma(2, 6))
+------------------------
+resultado final:
+function suma(a, b){
+    return a+b;
+}
+
+console.log(suma(2, 6))
+
+________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+CONDICIONALES
+Los condicionales son estructuras que permiten elegir entre la ejecución de una acción u otra. Son una condición, como bien indica su nombre
+para escrbir un condicional en javascript escribimos la plabra clave if.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+IF 
+es una estructura de control utilizada para tomar decisiones. if en este caso en español significaria como un "si"
+Es un condicional que sirve para realizar unas u otras operaciones en función de una expresión.
+
+¿como se esctutura una condicion?
+1. se escribe "IF"
+2.despues de ese if se ponen (parentesis) y dentro de esos parentesisi va a estar la condicion, esto que quiere decir que si la condicion resulta ser aprobada los codigos dentro de ella se ejecutaran.
+3. se ponen {llaves}
+ASI:
+if () {
+
+}
+___________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+VALORES BOOLEANOS 
+Una valor booleano representa un valor de verdad; es decir, TRUE(verdadero) o FALSE(falso).
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+¿como se escriben?
+ completamente en minusculas y que si se escribe de otra forma seria un error 
+
+-VERDADERO 
+console.log(true)
+-FALSO 
+console.log(false)

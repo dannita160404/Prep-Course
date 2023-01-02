@@ -1,0 +1,226 @@
+______________________________________________________________________________________________________________________________________________________________________________________________________________
+CLASES 
+______________________________________________________________________________________________________________________________________________________________________________________________________________
+QUE ES ?
+es una plantilla para la creacion de objetos, segun la plantilla planteada, se usan para representar conseptos
+EJEMPLO 
+                                                ANIMALES
+                                            🢇            🢆
+                                        LEON🦁            PERRO🐶
+
+cuando nos referimos a animales estamos hablando de un grupo que tiene una serie de conseptos para referirnos a los seres vivos
+las clases son similares es un cosepto que abarca muchos objetos
+
+LAS CLASES tienen atributos y metodos 
+-------------------------------------------------------------
+COMO SE CREA UNA CLASE
+
+para entenderlo mejor vamos a hacer una clase que nos ayude a contruir un jugador o personaje principal de un videojuego 
+1. se una la palabra reservad "class" al inicio del codigo
+2.se le pone el nombre a la clase seguido de la palabra reservada despues se ponen {llaves}
+ASI:
+class Jugador{
+
+}
+
+👉 se recomienda que el nombre de la clase inicie con MAYUSCULA 
+
+ 3. vamos a unar la palabra "constructor()" y destro de los (parentesis)vamos a poner los parametros que en este caso son atributos del personaje
+ -Queremos que los atributos del jugador tenga un nombre y el color de sus ojos 
+ ASI
+ class Jugador{
+    constructor(nombre, colordeojos){
+
+    }
+ }
+ 
+ 4. ahora vamos a poner dentro de las {llaves} el construtor de los atributos usando la palbra reservada "this." 
+ ASI:
+  class Jugador{
+    constructor(nombre, colordeojos){
+        this._nombre = nombre
+        this._colordeojos = colordeojos
+    }
+ }
+ 👉 se recomienda que se ponga una raya a el piso cuando se ejecutan los artributos 
+
+ 5. ahora vamos a poner los metodos se ubican fuera de el construtor, los metodos en este caso que va a hacer nuestro personaje en mi caso va a correr, saltar y saludar 
+ -para poner los metodos se pone el nombre del metodo (parentesis) y despues {llaves}
+ ASI:
+  class Jugador{
+    constructor(nombre, colordeojos){
+        this._nombre = nombre
+        this._colordeojos = colordeojos
+    }
+    correr(){}
+    saltar(){}
+    saludar(){}
+ }
+
+ 6. y supongamos que queremos mostrar un saludo se haria asi:
+ 
+  class Jugador{
+    constructor(nombre, colordeojos){
+        this._nombre = nombre
+        this._colordeojos = colordeojos
+    }
+    correr(){}
+    saltar(){}
+    saludar(){
+        return "HOLA BIENVENIDO A EL JUEGO "
+    }
+ }
+
+ LISTO YA TENEMOS NUESTRA CLASE HECHA Y AHORA COMO PODEMOS USARLA ?
+  vamos a crear nuestro jugador de la siguente manera:
+  1. creamos la variable de nuestro jugador seguido de un = 
+  ASI:
+  let jugador1 = 
+  2. ahora vamos a usar nuestro construtor vamos a usar nuestra clase como plantilla para crear nuestro jugador1 de la siguente manera
+  ASI:
+  let jugador1 = new Jugador
+                  ⇓    ⇓
+        aqui estamos   aqui tenemos que poner
+        diciendo que   el nombre de la clase 
+        queremos un    que vamos a usar
+        nuevo objeto
+ 
+  3. despues usamos (parentesis) y dentro de ellos ponemos los atributos de nuestro personaje de acuerdo con la clase 
+  QUE SIGNIFICA los atributos de la clase Jugador son NOMBRE Y COLOR DE OJOS, eson es lo que tenemos que poner dentro de los (parentesis)
+  como strigs y separados con ,
+  ASI:
+  let jugador1 = new Jugador ("pepito", "verdes")
+------------------------------------------------------------------------
+  RESULTADO FINAL:
+
+ class Jugador {
+  constructor(nombre, colordeojos){
+    this._nombre = nombre
+    this._colordeojos = colordeojos
+   }
+   correr(){}
+   saltar(){}
+   saludar(){
+    return "Hola soy " + this._nombre +  " y mis ojos son de color " + this._colordeojos
+   }
+  }
+
+   let jugador1 = new Jugador ("pepito", "verdes")
+
+   👉 PARA MOSTRAR EL RESULTADO SOLAMENTE PONEMOS EL NOMBRE DEL jugador1
+------------------------------------------------------------------------
+AHORA COMO SABEMOS DENTRO DE LA CLASE HAY FUNCIONES:
+ class Jugador {
+  constructor(nombre, colordeojos){
+    this._nombre = nombre
+    this._colordeojos = colordeojos
+   }
+   correr(){}       ┃
+   saltar(){}       ┃⇛ FUNCIONES
+   saludar(){       ┃
+    return "Hola soy " + this._nombre +  " y mis ojos son de color " + this._colordeojos
+   }
+  }
+
+  para utilizarlas es de una manera diferente por que son funciones, en este caso se hace de la siguente forma:
+  -jugador1.saludar()
+      ⇓         ⇓
+ponemos el     ponemos el nombre 
+nombre del     de la funcion que
+jugador        queremos que se ejecute
+que queremos
+que haga la
+funcion 
+
+______________________________________________________________________________________________________________________________________________________________________________________________________________
+PROTOTYPE 
+______________________________________________________________________________________________________________________________________________________________________________________________________________
+QUE ES ? 
+Los prototipos son un mecanismo mediante el cual los objetos en JavaScript heredan características entre sí. 
+EJEMPLO:
+                                                   🧔
+                                                 (padre)
+                                              🢇         🢆 
+                                            🧒           🧒
+                                          (hijo)         (hijo)
+
+los prototipos son parecidas a las clases, pero los prototipos tienen la capacidad de heredar las propiedades especificas de cada objeto 
+que quiere decir 
+EJEMPLO:
+supongamos que tenemos una clase que determina las caracteristicas de un padre
+ASI:
+
+   class Padre{
+    constructor(nombre, edad, altura, peso){
+      this.nombre = nombre;
+      this.edad = edad;
+      this.altura = altura;
+      this. peso = peso;
+    }
+   }
+ 
+ 👉 supongamos que nuestro padre se llama luis angel, su edad es de 24 años, su altuya es de 1.74 y su peso es de 74k
+ usando el contrutor nos debe quedar asi :
+
+ let Luisangel = new Padre("luis angel", "29", "1.77", "74k")
+
+ AHORA supongamos que Luis angel tuvo un hijo que se llama jacob , tiene 2 años, su altura es de 87 cm y su peso es de 13k
+ su padre luis angel le va a heredar su contrutor a su hijo 
+ ASI :
+ let jacob = new Padre("jacob", "2", "87 cm", "13k")
+ 
+ AHORA supongamos que este hijo "jacob" le añadio una funcion a su padre que fue regañarlo cuando se porta mal 
+ COMO PODEMOS AÑADIRLE ESA FUNCION ?
+
+👉 aqui se usa el PROTOTYPE ya que su funcion es añadir funciones a el contructor
+
+SE USA DE LA SIGUENTE MANERA:
+
+           Padre.prototype.regaño = funcion(){return "No hijo eso no se hace "}
+             ⇓      ⇓        ⇓          ⇓                    ⇓      
+ aqui llamamo el  ponemos   nombre   creamos la funcion     aqui ponemos los codigos 
+ contructor       la        de la                           de nuestra funcion 
+                  palabra   funcion
+                  recervada
+                  
+AHORA ya se le añadio a la clase padre la funcion de regaño 
+COMO PUEDO MOSTRARLO?
+se pone el nombre del padre "Luisangel" y se pone un . y se pone la funcion regaño 
+ASI:
+Luisangel.regaño
+
+RESULTADO FINAL 
+     class Padre{
+    constructor(nombre, edad, altura, peso){
+      this.nombre = nombre;
+      this.edad = edad;
+      this.altura = altura;
+      this. peso = peso;
+    }
+   }
+
+   let Luisangel = new Padre("luis angel", "29", "1.77", "73k")
+
+   let jacob = new Padre("jacob", "2", "87 cm", "13k")
+
+   Padre.prototype.regaño = function(){return"no hijo eso no se hace"}
+   
+
+   Luisangel.regaño
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  
