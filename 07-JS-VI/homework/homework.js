@@ -13,7 +13,7 @@ function mayuscula(nombre) {
 function invocarCallback(cb) {
   // Invoca al callback `cb`
   //Tu código:
-  invocarCallback(cd)
+  cb()
 }
 
 function operacionMatematica(n1, n2, cb) {
@@ -28,7 +28,6 @@ function sumarArray(numeros, cb) {
   // Pasa el resultado a `cb`
   // No es necesario devolver nada
   //Tu código:
-  var numeros = [1,2,3,4,5,6,7,8,9]
    var suma = 0;
  for(var i = 0; i < numeros.length; i++) {
      suma = suma + numeros[i];
@@ -50,18 +49,13 @@ function map(array, cb) {
   // Itera sobre cada valor en "array", pásalo a `cb` y luego ubicar el valor devuelto por `cb` en un nuevo array
   // El nuevo array debe tener la misma longitud que el array del argumento
   //Tu código:
-  var array = [1,2,3,4,5]
-   nuevoarray = []
+
    var nuevoArray = [];
-   function cb (e) {console.log(e)}
+   
    for(var i = 0; i < array.length; i++) {
      nuevoArray.push(cb(array[i]));
-    nuevoArray[i] = cb(array[i]);
    }
-  var nuevoArray = array.map(function(el) {
-    return cb(el);
-  });
-  return nuevoArray;
+return nuevoArray
 }
 
 

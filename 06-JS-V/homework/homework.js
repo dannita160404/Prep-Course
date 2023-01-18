@@ -14,15 +14,17 @@ function crearUsuario() {
       this.nombre = opciones.nombre
       this.email = opciones.email
       this.password = opciones.password
-    
-
-     Usuario.prototype.saludar = function(){
-      return "Hola mi nombre es " + this.nombre
-    };
+      this.saludar = function(){
+        return "Hola, mi nombre es " + this.nombre
+      };
+      
   };
-  
+ 
 }
-return Usuario;
+return Usuario
+}
+
+
 
 function agregarMetodoPrototype(Constructor) {
   // Agrega un método al Constructor del `prototype`
@@ -30,10 +32,10 @@ function agregarMetodoPrototype(Constructor) {
   // Tu código:
 
   Constructor.prototype.saludar = function(){
-    return "Hello World"
+    return "Hello World!"
   }
 }
-}
+
 
 function agregarStringInvertida() {
   // Agrega un método al prototype de String que devuelva la misma cadena de caracteres, pero invertida.
@@ -49,7 +51,7 @@ function agregarStringInvertida() {
     return stringInvertida;
   };
 }
-}
+
 
 // ---------------------------------------------------------------------------//
   //Crea el constructor de la clase "Persona"
@@ -93,7 +95,7 @@ function agregarMetodo() {
   //La función agrega un método "datos" a la clase Persona que toma el nombre y la edad de la persona y devuelve: 
   //Ej: "Juan, 22 años"
   Persona.prototype.datos = function(){
-    return this.nombre + ", " + this.edad + "años"
+    return this.nombre + ", " + this.edad + " años"
   }
 }
   
